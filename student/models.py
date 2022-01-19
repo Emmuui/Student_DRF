@@ -52,7 +52,7 @@ class Discipline(models.Model):
 
 
 class Marks(models.Model):
-    student = models.ForeignKey(Student, verbose_name='Студент', on_delete=models.CASCADE)
+    student = models.ForeignKey(Student, verbose_name='Студент', on_delete=models.CASCADE, related_name='student_mark')
     subject = models.ForeignKey(Discipline, verbose_name='Дисциплина', on_delete=models.CASCADE)
     mark = models.IntegerField(verbose_name='Оценка')
 
