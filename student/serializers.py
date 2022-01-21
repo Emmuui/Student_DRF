@@ -15,7 +15,7 @@ class FacultySerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Faculty
-        fields = ['name', 'dean']
+        fields = '__all__'
 
 
 class GroupsSerializer(serializers.ModelSerializer):
@@ -48,7 +48,14 @@ class StudentSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Student
-        fields = ['name', 'second_name', 'mark_exams', 'group', 'scholarship']
+        fields = '__all__'
+
+
+class CreateStudentSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Student
+        fields = '__all__'
 
 
 class StudentMarkSerializer(serializers.ModelSerializer):
