@@ -3,7 +3,7 @@ from .permissions import IsUserOrAdmin
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from .serializers import *
-from rest_framework import status, generics
+from rest_framework import status, generics, viewsets
 
 
 class FacultyListView(generics.ListCreateAPIView):
