@@ -1,4 +1,7 @@
 from django.urls import path
+from rest_framework import routers
+
+from rest_framework.routers import DefaultRouter
 
 from . import views, api
 
@@ -23,3 +26,8 @@ urlpatterns = [
     path('viewsets/student/detail/<int:pk>', api.StudentViewSet.as_view({'get': 'retrieve'})),
     path('viewsets/student/update/<int:pk>', api.StudentViewSet.as_view({'put': 'update'})),
 ]
+
+routers = DefaultRouter()
+routers.register('modelviewsets/student_marks', api.MarksViewSet, basename='student_marks')
+routers.register('modelviewsets/student', api.StudentModelViewSet, basename='student_model_view_set')
+urlpatterns += routers.urls

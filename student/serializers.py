@@ -59,7 +59,6 @@ class CreateStudentSerializer(serializers.ModelSerializer):
 
 
 class StudentMarkSerializer(serializers.ModelSerializer):
-    id = serializers.IntegerField(required=False)
 
     class Meta:
         model = Student
