@@ -39,4 +39,4 @@ class MarksViewSet(viewsets.ReadOnlyModelViewSet):
 
 class StudentModelViewSet(viewsets.ModelViewSet):
     queryset = Student.objects.all()
-    serializer_class = StudentSerializer
+    serializer_class = CreateStudentSerializer
